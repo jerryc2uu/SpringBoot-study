@@ -18,15 +18,19 @@
             <hr>
             <!-- 아래의 코드를 추가 합니다.-->
             <table border="1">
-                <tr>
-                    <th>TEXT</th>
-                </tr>
-                <th:block th:each="rl : ${resultList}">
-                    <tr>
-                        <td th:text="${ rl }"></td>
-                    </tr>
-                </th:block>
-            </table>
+			    <tr>
+			        <th>id</th>
+			        <th>name</th>
+			        <th>email</th>
+			    </tr>
+			    <th:block th:each="salary : ${salaryList}">
+			        <tr>
+			            <td th:text="${ salary.id }"></td>
+			            <td th:text="${ salary.name }"></td>
+			            <td th:text="${ salary.email }"></td>
+			        </tr>
+			    </th:block>
+			</table>
             
         </div>
         <th:block layout:fragment="footer" th:include="@{/fragments/footer}"></th:block>	
